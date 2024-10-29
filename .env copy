@@ -1,0 +1,10 @@
+# PostgreSQL settings
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=admin
+POSTGRES_DB=bronze
+POSTGRES_PORT=5432
+
+# pgAdmin settings
+PGADMIN_DEFAULT_EMAIL=admin@example.com
+PGADMIN_DEFAULT_PASSWORD=admin_password
+PGADMIN_PORT=5050

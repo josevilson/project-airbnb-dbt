@@ -1,0 +1,25 @@
+airbnb:
+  outputs:
+    dev:
+      dbname: airbnb
+      host: localhost
+      pass: admin
+      port: 5432
+      schema: airbnb
+      threads: 1
+      type: postgres
+      user: admin
+  target: dev
+my_project:
+  outputs:
+    dev:
+      dbname: airbnb
+      host: localhost
+      pass:
+        POSTGRES_PASSWORD: null
+      port: 5432
+      schema: airbnb
+      type: postgres
+      user:
+        POSTGRES_USER: null
+  target: dev
