@@ -1,0 +1,7 @@
+models:
+  - name: stg_airbnb_calendar
+    description: Individual food and drink items that make up our orders, one row per item.
+  - name: stg_airbnb_listings
+    description: Individual food and drink items that make up our orders, one row per item.
+  - name: stg_airbnb_reviews
+    description: Individual food and drink items that make up our orders, one row per item.

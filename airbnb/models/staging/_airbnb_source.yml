@@ -1,0 +1,11 @@
+sources:
+  - name: airbnb
+    schema: airbnb
+    description: Dados de e-commerce para a Jaffle Shop
+    tables:
+      - name: raw_airbnb_calendar
+        description: Um registro por pessoa que comprou um ou mais itens
+      - name: raw_airbnb_listings
+        description: Um registro por pessoa que comprou um ou mais itens
+      - name: raw_airbnb_reviews
+        description: Um registro por pessoa que comprou um ou mais itens
