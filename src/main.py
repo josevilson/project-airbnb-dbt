@@ -3,7 +3,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 
-file_path = "../airbnb/data/stg_airbnb_reviews.csv"
+file_path = "../airbnb/data/stg_airbnb_listings.csv"
 
 df = pd.read_csv(file_path, dtype=str)
 
@@ -17,5 +17,5 @@ engine = create_engine(connection_string)
 # %%
 # Envie o DataFrame para o PostgreSQL
 
-df.to_sql('stg_airbnb_reviews', schema="airbnb", con=engine, if_exists='replace',index=False)
+df.to_sql('raw_airbnb_listings', chunksize=1000000, schema="airbnb", con=engine, if_exists='replace',index=False)
 # %%
