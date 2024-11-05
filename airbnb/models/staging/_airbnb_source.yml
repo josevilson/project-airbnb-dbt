@@ -1,11 +1,150 @@
 sources:
   - name: airbnb
     schema: airbnb
-    description: Dados de e-commerce para a Jaffle Shop
+    description: Fonte de informações sobre listagens de hospedagem, avaliações de hóspedes e disponibilidade de calendário na cidade do Rio de Janeiro.
     tables:
       - name: raw_airbnb_calendar
-        description: Um registro por pessoa que comprou um ou mais itens
+        description: Esta tabela contém informações sobre a disponibilidade das propriedades ao longo do tempo
+        columns:
+          - name: listing_id
+            description: ID do anúncio
+            tests:
+              - not_null
+              - unique
+          - name: date
+            description: Data do anúncio
+            tests:
+              - not_null
+          - name: available
+            description: Disponibilidade do anúncio
+            tests:
+              - not_null
+          - name: price
+            description: Preço do anúncio
+          - name: adjusted_price
+            description: Preço ajustado do anúncio
+          - name: minimum_nights
+            description: Minimo de noites
+          - name: maximum_nights
+            description: Maximo de noites
+
       - name: raw_airbnb_listings
-        description: Um registro por pessoa que comprou um ou mais itens
+        description: Esta tabela contém informações detalhadas sobre as propriedades listadas no Airbnb.
+        columns:
+          - name: listing_url
+            description: URL da listagem no site
+            tests:
+              - not_null
+          - name: scrape_id
+            description: ID de scrape para rastreamento
+            tests:
+              - not_null
+          - name: last_scraped
+            description: Data da última coleta
+            tests:
+              - not_null
+          - name: source
+            description: Fonte de origem da listagem
+            tests:
+              - not_null
+          - name: name
+            description: Nome da listagem
+            tests:
+              - not_null
+          - name: description
+            description: Descrição da listagem
+            tests:
+              - not_null
+          - name: neighborhood_overview
+            description: Visão geral do bairro
+          - name: picture_url
+            description: URL da imagem principal
+            tests:
+              - not_null
+          - name: host_id
+            description: Identificador do anfitrião
+            tests:
+              - not_null
+          - name: host_url
+            description: URL do perfil do anfitrião
+            tests:
+              - not_null
+          - name: host_name
+            description: Nome do anfitrião
+            tests:
+              - not_null
+          - name: host_since
+            description: Data de cadastro do anfitrião
+          - name: host_location
+            description: Localização do anfitrião
+          - name: host_about
+            description: Sobre o anfitrião
+          - name: host_response_time
+            description: Tempo de resposta do anfitrião
+          - name: host_response_rate
+            description: Taxa de resposta
+          - name: host_acceptance_rate
+            description: Taxa de aceitação
+          - name: host_is_superhost
+            description: Indicador de superhost
+          - name: host_thumbnail_url
+            description: URL da imagem do anfitrião
+          - name: latitude
+            description: Latitude da propriedade
+            tests:
+              - not_null
+          - name: longitude
+            description: Longitude da propriedade
+            tests:
+              - not_null
+          - name: property_type
+            description: Tipo de propriedade
+            tests:
+              - not_null
+          - name: room_type
+            description: Tipo de quarto
+            tests:
+              - not_null
+          - name: accommodates
+            description: Número de hóspedes suportados
+            tests:
+              - not_null
+          - name: bathrooms
+            description: Número de banheiros
+          - name: price
+            description: Preço por noite
+            tests:
+              - not_null
+          - name: availability_365
+            description: Dias disponíveis no ano
+          - name: review_scores_rating
+            description: Nota de avaliação média
+          - name: reviews_per_month
+            description: Avaliações por mês 
+
       - name: raw_airbnb_reviews
-        description: Um registro por pessoa que comprou um ou mais itens
+        description: Esta tabela contém informações sobre as avaliações feitas por hóspedes que ficaram nas propriedades listadas. 
+        columns:
+          - name: listing_id
+            description: ID do anúncio
+            tests:
+              - not_null
+              - unique
+          - name: id
+            description: ID da avaliação
+            tests:
+              - not_null
+          - name: date
+            description: Data da avaliação
+            tests:
+              - not_null
+          - name: reviewer_id
+            description: ID do avaliador
+            tests:
+              - not_null
+          - name: reviewer_name
+            description: Nome do avaliador
+            tests:
+              - not_null
+          - name: comments
+            description: Comentários
