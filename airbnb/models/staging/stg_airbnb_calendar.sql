@@ -9,10 +9,10 @@ with stg_airbnb_calendar as (
     select 
     
     listing_id as listing_id, 
-    date as date_avaliable, 
+    date as listing_date_avaliable, 
     available as listing_avaliable,
-    minimum_nights as minimum_nights,
-    maximum_nights as maximum_nights
+    minimum_nights as listing_minimum_nights,
+    maximum_nights as listing_maximum_nights
 
     from 
 
