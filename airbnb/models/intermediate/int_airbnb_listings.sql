@@ -22,7 +22,7 @@ WITH int_airbnb_listings AS (
         CAST(listing_accommodates_amount AS INTEGER) AS listing_accommodates_amount,
         CAST(listing_bathrooms_amount AS DECIMAL) AS listing_bathrooms_amount,
         CAST(listing_beds_amount AS DECIMAL) AS listing_beds_amount,
-        CAST(REPLACE(listing_price, '$', '') AS DECIMAL) AS listing_price,
+        COALESCE(CAST(REPLACE(REPLACE(listing_price, '$', ''), ',', '') AS DECIMAL), 0) AS listing_price,
         CAST(availability_365 AS INTEGER) AS availability_365,
         CAST(review_scores_rating AS DECIMAL) AS review_scores_rating,
         CAST(reviews_per_month AS DECIMAL) AS reviews_per_month

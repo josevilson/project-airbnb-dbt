@@ -2,7 +2,7 @@
 
 WITH int_airbnb_calendar AS (
     SELECT DISTINCT
-        CAST(listing_id AS INTEGER) AS listing_id,
+        listing_id,
         CAST(listing_date_avaliable AS DATE) AS listing_date_avaliable,
         CASE 
             WHEN LOWER(listing_avaliable) = 't' THEN TRUE

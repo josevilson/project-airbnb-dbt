@@ -2,7 +2,7 @@
 
 WITH int_airbnb_reviews AS (
     SELECT DISTINCT
-        CAST(listing_id AS INTEGER) AS listing_id,
+        listing_id,
         CAST(id AS BIGINT) AS review_id,
         CAST(date AS DATE) AS review_date,
         CAST(reviewer_id AS BIGINT) AS reviewer_id,
