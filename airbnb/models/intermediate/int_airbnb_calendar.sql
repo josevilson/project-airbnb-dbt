@@ -3,16 +3,16 @@
 WITH int_airbnb_calendar AS (
     SELECT DISTINCT
         CAST(listing_id AS INTEGER) AS listing_id,
-        CAST(date AS DATE) AS date,
+        CAST(listing_date_avaliable AS DATE) AS listing_date_avaliable,
         CASE 
-            WHEN LOWER(available) = 't' THEN TRUE
+            WHEN LOWER(listing_avaliable) = 't' THEN TRUE
             ELSE FALSE
-        END AS available,
-        COALESCE(TRY_CAST(REPLACE(price, '$', '') AS DECIMAL), 0) AS price,
-        COALESCE(TRY_CAST(minimum_nights AS INTEGER), 1) AS minimum_nights,
-        COALESCE(TRY_CAST(maximum_nights AS INTEGER), 1) AS maximum_nights
+        END AS listing_avaliable,
+        COALESCE(CAST(REPLACE(REPLACE(listing_price, '$', ''), ',', '') AS DECIMAL), 0) AS listing_price,
+        COALESCE(CAST(listing_minimum_nights as INTEGER), 1) AS listing_minimum_nights,
+        COALESCE(CAST(listing_maximum_nights as INTEGER), 1) AS listing_maximum_nights
     FROM {{ ref('stg_airbnb_calendar') }}
     WHERE listing_id IS NOT NULL
 )
 
-SELECT * FROM int_airbnb_calendar;
+SELECT * FROM int_airbnb_calendar
