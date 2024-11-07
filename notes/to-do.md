@@ -21,10 +21,11 @@
 
 # To-Do
 
-- [ ] Adicionar DBT Expectation
+- [ ] Adicionar DBT Expectation -> José
 - [ ] Fazer analises mais profunda dos dados
 - [ ] Analises com Joins -> Incluir Joins
 - [ ] Schema.Yml preencher os metadados
 - [ ] Adicionar tests - Incluir Expectations
 - [ ] Documentação do Código gerar uma documentação
 - [ ] Instalar outras dependencias se necessário - exemplo: dbt-utils, dbt-calendar
+- [ ] Perguntas de negócios para responder -> storytelling.
