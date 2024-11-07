@@ -16,7 +16,7 @@ SELECT
     neighborhood,
     property_type,
     accommodates_amount,
-    AVG(listing_price) AS avg_price,
+    ROUND(AVG(listing_price),2) AS avg_price,
     COUNT(*) AS total_listings
 FROM price_data
 GROUP BY neighborhood, property_type,accommodates_amount
