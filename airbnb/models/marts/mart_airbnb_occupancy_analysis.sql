@@ -11,7 +11,7 @@ WITH availability_data AS (
 SELECT 
     listing_neighbourhood_name,
     listing_property_type,
-    AVG(availability_365) AS avg_availability,
+    FLOOR(AVG(availability_365)) AS avg_availability,
     COUNT(*) AS total_listings
 FROM availability_data
 GROUP BY listing_neighbourhood_name, listing_property_type
