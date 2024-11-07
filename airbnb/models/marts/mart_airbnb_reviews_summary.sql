@@ -3,7 +3,7 @@
 WITH review_data AS (
     SELECT 
         l.host_id,
-        LOWER(l.neighborhood_overview) AS neighborhood,
+        LOWER(l.listing_neighbourhood_name) AS neighborhood,
         l.listing_id,
         l.review_scores_rating,
         r.review_id,
