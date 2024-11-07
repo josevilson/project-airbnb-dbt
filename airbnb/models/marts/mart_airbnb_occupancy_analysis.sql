@@ -15,3 +15,5 @@ SELECT
     COUNT(*) AS total_listings
 FROM availability_data
 GROUP BY listing_neighbourhood_name, listing_property_type
+
+/* Média de disponibilidade das propriedades listadas, agrupadas por bairro e tipo de propriedade. */
