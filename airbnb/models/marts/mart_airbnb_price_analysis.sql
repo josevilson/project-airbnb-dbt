@@ -3,7 +3,7 @@
 WITH price_data AS (
     SELECT
         l.listing_id,
-        LOWER(l.neighborhood_overview) AS neighborhood,
+        LOWER(l.listing_neighbourhood_name) AS neighborhood,
         LOWER(l.listing_property_type) AS property_type,
         c.listing_price
     FROM {{ ref('int_airbnb_listings') }} AS l

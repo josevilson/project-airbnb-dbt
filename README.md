@@ -240,3 +240,43 @@ erDiagram
 
 Este projeto demonstra uma abordagem prática de engenharia de dados, garantindo a qualidade dos dados em cada etapa do pipeline e aplicando metodologias robustas para transformação e validação.
 """
+
+
+## Problema de negócio
+
+### Aumento nos Preços de Aluguéis e Imóveis em Áreas Turísticas
+**Hipótese**: Com a popularidade do Airbnb, áreas turísticas do **Rio de Janeiro**, como Copacabana, Ipanema e Leblon, passaram a ser mais visadas para locações de curto prazo. Isso pode ter contribuído para um aumento nos preços dos aluguéis, já que os proprietários preferem o Airbnb a contratos de longo prazo por serem mais lucrativos.
+
+**Possível Impacto**: Deslocamento de moradores locais para regiões periféricas, onde os aluguéis são mais acessíveis, resultando em gentrificação de bairros tradicionais.
+
+### Perguntas:
+
+- Qual é a relação entre a quantidade de imóveis listados no Airbnb e o aumento nos preços dos aluguéis de longo prazo em áreas turísticas como Copacabana e Ipanema?
+
+- Há correlação entre a quantidade de imóveis disponíveis no Airbnb e o aumento dos preços dos imóveis para compra em bairros turísticos do Rio de Janeiro?
+
+- Como variam os preços médios dos aluguéis de curto prazo por bairro e como isso se compara ao preço médio de aluguel de longo prazo nas mesmas áreas?
+
+- Quais bairros turísticos apresentam maior taxa de crescimento de novos anúncios no Airbnb ao longo dos últimos anos?
+
+- Qual é a proporção de imóveis de locação de curto prazo que são listados por anfitriões com múltiplos imóveis? Isso indica maior especulação imobiliária?
+
+- Quais bairros apresentam as maiores taxas de ocupação nos imóveis do Airbnb, e como isso impacta os preços de aluguel de longo prazo nessas áreas?
+
+- Qual a diferença média de preços de aluguel de curta temporada entre apartamentos inteiros e quartos privados nas áreas turísticas?
+
+- Em períodos de alta temporada (Carnaval, Ano Novo), quanto os preços de locação de curto prazo sobem em comparação ao aluguel de longo prazo nos bairros mais turísticos?
+
+- Quais áreas do Rio de Janeiro mostram maior tendência de "turistificação" (aumento no número de imóveis de curto prazo e aumento dos preços de aluguéis)?
+
+- Qual o impacto da disponibilidade de Airbnbs de luxo (faixa alta de preço) no aumento do preço de venda e de aluguel de imóveis nas redondezas?
+
+- Qual a relação entre o tempo de permanência média dos hóspedes de Airbnb e o impacto no mercado de aluguéis residenciais de longo prazo?
+
+- Como a presença de Airbnb impacta a quantidade de imóveis disponíveis para aluguel de longo prazo em regiões turísticas?
+
+- Qual é a porcentagem de imóveis listados no Airbnb que antes estavam disponíveis para aluguel de longo prazo?
+
+- Há diferenças significativas nos preços médios dos Airbnbs em áreas turísticas comparadas a áreas menos turísticas, mesmo com características semelhantes?
+
+- Como os valores médios de reserva diária variam por bairros ao longo do ano, e qual a relação desse aumento com a oferta de moradia acessível para a população local?
