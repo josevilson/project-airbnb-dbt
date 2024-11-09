@@ -40,4 +40,4 @@ SELECT
     END AS price_availability_trend
 FROM availability_summary a
 JOIN price_summary p ON a.listing_id = p.listing_id
-ORDER BY price_availability_trend;
+ORDER BY price_availability_trend

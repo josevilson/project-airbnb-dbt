@@ -5,7 +5,7 @@ WITH review_data AS (
         l.listing_id,
         l.listing_neighbourhood_name,
         l.listing_property_type,
-        AVG(r.review_scores_rating) AS avg_review_score,
+        AVG(l.review_scores_rating) AS avg_review_score,
         COUNT(r.review_id) AS total_reviews
     FROM {{ ref('int_airbnb_listings') }} AS l
     JOIN {{ ref('int_airbnb_reviews') }} AS r 
@@ -46,7 +46,7 @@ SELECT
     COUNT(total_reviews) AS total_reviews
 FROM combined_data
 GROUP BY listing_neighbourhood_name, listing_property_type
-ORDER BY occupancy_rate DESC, avg_review_score DESC;
+ORDER BY occupancy_rate DESC, avg_review_score DESC
 
 
 /* Correlação entre taxa de ocupação e avaliação média das propriedades */
