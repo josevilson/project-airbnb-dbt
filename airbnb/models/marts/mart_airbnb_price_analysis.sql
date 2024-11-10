@@ -2,24 +2,18 @@
 
 WITH price_data AS (
     SELECT
-        l.listing_id,
-        LOWER(l.listing_neighbourhood_name) AS neighborhood,
-        LOWER(l.listing_property_type) AS property_type,
-        l.listing_accommodates_amount as accommodates_amount,
-        c.listing_price
-    FROM {{ ref('int_airbnb_listings') }} AS l
-    JOIN {{ ref('int_airbnb_calendar') }} AS c
-    ON l.listing_id = c.listing_id
+        listing_id,
+        listing_neighbourhood_name AS neighborhood,
+        listing_price
+    FROM {{ ref('int_airbnb_listings') }} 
 )
 
-SELECT 
+SELECT
     neighborhood,
-    property_type,
-    accommodates_amount,
-    ROUND(AVG(listing_price),2) AS avg_price,
+    AVG(listing_price) AS avg_price,
     COUNT(*) AS total_listings
 FROM price_data
-GROUP BY neighborhood, property_type,accommodates_amount
+GROUP BY neighborhood
 
 
 /* Esse modelo calculará o preço médio por tipo de propriedade, por bairro e capacidade de pessoas no quarto. */

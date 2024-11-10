@@ -1,6 +1,6 @@
 sources:
   - name: airbnb
-    schema: airbnb
+    schema: airbnb_dbt
     description: Fonte de informações sobre listagens de hospedagem, avaliações de hóspedes e disponibilidade de calendário na cidade do Rio de Janeiro.
     tables:
       - name: raw_airbnb_calendar
