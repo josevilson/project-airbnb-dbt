@@ -8,7 +8,18 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.11.0"
 ydata-profiling = "^4.12.0"
+dbt-bigquery = "^1.8.3"
+transformers = "^4.46.2"
+ipykernel = "^6.29.5"
+tensorflow = "^2.18.0"
+pandas = "^2.2.3"
+tf-keras = "^2.18.0"
+dbt-postgres = "^1.8.2"
 
+
+[tool.poetry.group.dev.dependencies]
+pandas-gbq = "^0.24.0"
+google-auth = "^2.36.0"
 
 [build-system]
 requires = ["poetry-core"]

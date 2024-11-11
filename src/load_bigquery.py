@@ -4,24 +4,25 @@ import pandas as pd
 from pandas_gbq import to_gbq
 
 # Configurações do BigQuery e Caminho para as Credenciais
-project_id = "seu-projeto-id"  # Substitua pelo ID do seu projeto
-dataset_id = "airbnb"  # Nome do dataset onde as tabelas serão criadas
-credentials_path = "caminho/para/suas_credenciais.json"  # Caminho para o arquivo JSON de credenciais
+project_id = "airbnb-dbt"  # Substitua pelo ID do seu projeto
+dataset_id = "airbnb_dbt"  # Nome do dataset onde as tabelas serão criadas
+credentials_path = "airbnb/keyjson.json"  # Caminho para o arquivo JSON de credenciais
 
 # Carregar as credenciais do arquivo JSON
 credentials = service_account.Credentials.from_service_account_file(credentials_path)
 
 # Caminho da pasta com os arquivos CSV
-folder_path = "../airbnb/data/"
+folder_path = "airbnb/data/"
 
 # Percorre todos os arquivos na pasta especificada
 for file_name in os.listdir(folder_path):
-    if file_name.endswith(".csv"):
+    if file_name.endswith("_sentiment.csv"):
         # Cria o caminho completo do arquivo
         file_path = os.path.join(folder_path, file_name)
+        print(file_path)
         
         # Carrega o arquivo CSV como DataFrame
-        df = pd.read_csv(file_path, dtype=str)
+        df = pd.read_csv(file_path, sep=";",dtype=str)
         
         # Define o nome da tabela com base no nome do arquivo (sem a extensão .csv)
         table_name = file_name.replace(".csv", "")

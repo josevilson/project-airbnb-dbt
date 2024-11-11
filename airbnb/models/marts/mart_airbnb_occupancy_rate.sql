@@ -23,7 +23,7 @@ WITH calendar_data AS (
 SELECT
     year,
     month,
-    AVG(CAST(occupied_days AS DECIMAL) / total_days) * 100 AS avg_occupancy_rate  -- calcula a taxa média de ocupação
+    AVG(CAST(occupied_days AS FLOAT64) / total_days) * 100 AS avg_occupancy_rate  -- calcula a taxa média de ocupação
 FROM monthly_occupancy
 GROUP BY year, month
 ORDER BY year, month
