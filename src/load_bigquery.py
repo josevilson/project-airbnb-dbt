@@ -16,7 +16,7 @@ folder_path = "airbnb/data/"
 
 # Percorre todos os arquivos na pasta especificada
 for file_name in os.listdir(folder_path):
-    if file_name.endswith("_sentiment.csv"):
+    if file_name.endswith("_sentimental_all.csv"):
         # Cria o caminho completo do arquivo
         file_path = os.path.join(folder_path, file_name)
         print(file_path)

@@ -3,7 +3,7 @@ WITH neighborhood_data AS (
         a.listing_neighbourhood_name,
         COUNT(c.listing_id) AS total_listings,
         AVG(a.listing_price) AS avg_price,
-        SUM(CASE WHEN c.listing_avaliable = 't' THEN 1 ELSE 0 END) / COUNT(a.listing_id) AS occupancy_rate
+        SUM(CASE WHEN c.listing_avaliable = 1 THEN 1 ELSE 0 END) / COUNT(a.listing_id) AS occupancy_rate
     FROM
         {{ ref('int_airbnb_listings') }} a
     LEFT JOIN
