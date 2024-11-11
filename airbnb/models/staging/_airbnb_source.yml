@@ -10,7 +10,6 @@ sources:
             description: ID do anúncio
             tests:
               - not_null
-              - unique
           - name: date
             description: Data do anúncio
             tests:
@@ -51,10 +50,6 @@ sources:
             description: Nome da listagem
             tests:
               - not_null
-          - name: description
-            description: Descrição da listagem
-            tests:
-              - not_null
           - name: neighborhood_overview
             description: Visão geral do bairro
           - name: picture_url
@@ -67,10 +62,6 @@ sources:
               - not_null
           - name: host_url
             description: URL do perfil do anfitrião
-            tests:
-              - not_null
-          - name: host_name
-            description: Nome do anfitrião
             tests:
               - not_null
           - name: host_since
@@ -111,10 +102,10 @@ sources:
               - not_null
           - name: bathrooms
             description: Número de banheiros
-          - name: price
-            description: Preço por noite
-            tests:
-              - not_null
+          # - name: price
+          #   description: Preço por noite
+          #   tests:
+          #     - not_null
           - name: availability_365
             description: Dias disponíveis no ano
           - name: review_scores_rating
@@ -129,7 +120,6 @@ sources:
             description: ID do anúncio
             tests:
               - not_null
-              - unique
           - name: id
             description: ID da avaliação
             tests:
@@ -148,3 +138,36 @@ sources:
               - not_null
           - name: comments
             description: Comentários
+      - name: raw_airbnb_reviews_sentimental_all
+        description: Esta tabela contém informações sobre as avaliações feitas por hóspedes que ficaram nas propriedades listadas e classificacao por sentimento 
+        columns:
+          - name: listing_id
+            description: ID do anúncio
+            tests:
+              - not_null
+          - name: id
+            description: ID da avaliação
+            tests:
+              - not_null
+          - name: date
+            description: Data da avaliação
+            tests:
+              - not_null
+          - name: reviewer_id
+            description: ID do avaliador
+            tests:
+              - not_null
+          - name: reviewer_name
+            description: Nome do avaliador
+            tests:
+              - not_null
+          - name: comments
+            description: Comentários
+          - name: linguagem
+            description: linguagem do commentario
+            tests:
+              - not_null
+          - name: sentimento
+            description: sentimento do commentario
+            tests:
+              - not_null

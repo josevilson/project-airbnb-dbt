@@ -1,7 +1,9 @@
 models:
   - name: stg_airbnb_calendar
-    description: Individual food and drink items that make up our orders, one row per item.
+    description: Tabela do calendário e disponibilidade do listings.
   - name: stg_airbnb_listings
-    description: Individual food and drink items that make up our orders, one row per item.
+    description: Tabela dos anuncios.
   - name: stg_airbnb_reviews
-    description: Individual food and drink items that make up our orders, one row per item.
+    description: Tabela relacionado ao comentarios dos hospedes
+  - name: raw_airbnb_reviews_sentimental_all
+    description: Tabela dos comentários com sentimento do comentário.
