@@ -1,6 +1,4 @@
-# Vamos gerar o arquivo README.md com o conteúdo fornecido
 
-readme_content = """
 # Projeto: Engenharia de Dados e Garantia de Qualidade no Conjunto de Dados do Airbnb no Rio de Janeiro
 
 ## Introdução
