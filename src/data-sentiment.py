@@ -9,19 +9,6 @@ analisador_sentimento = pipeline("sentiment-analysis", model="nlptown/bert-base-
 df = pd.read_csv("../airbnb/data/raw_airbnb_reviews.csv", dtype=str, nrows=100)
 
 
-
-#%%
-# Exemplo de DataFrame com textos em português e inglês
-# dados = {
-#     "id": [1, 2, 3],
-#     "texto": [
-#         "Eu adorei o serviço, foi excelente!",
-#         "Não gostei do produto, é de baixa qualidade.",
-#         "The service was mediocre, nothing special."
-#     ]
-# }
-# df = pd.DataFrame(dados)
-
 # Função para obter sentimento de cada texto
 def obter_sentimento(texto):
     resultado = analisador_sentimento(texto)[0]
