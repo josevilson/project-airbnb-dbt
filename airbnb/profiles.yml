@@ -9,15 +9,3 @@ bigquery_project_airbnb:
       keyfile: "keyjson.json" # Caminho completo do keyfile.json
       threads: 1                          # Número de threads para paralelismo
       timeout_seconds: 300                # Tempo de timeout das consultas
-airbnb:
-  outputs:
-    dev:
-      dbname: airbnb
-      host: localhost
-      pass: admin
-      port: 5432
-      schema: airbnb
-      threads: 1
-      type: postgres
-      user: admin
-  target: dev
